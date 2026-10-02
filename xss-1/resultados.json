@@ -1,0 +1,110 @@
+{
+  "dataUTC": "2026-10-02T14:19:51.205Z",
+  "chromium": "153.0.8010.12",
+  "htmlSHA256": "7a22320c52216894a53e6e9fd7be9f570156ca56f1606df7543fe9fd6210e228",
+  "corpusSHA256": "beecfce80d1dba8122c6eb359502fa64ced367bc54503ccb8eb058719affedbc",
+  "total": 10,
+  "aprovados": 10,
+  "casos": [
+    {
+      "numero": 1,
+      "entrada": "",
+      "passou": true,
+      "valorLido": "",
+      "observado": {
+        "texto": "Olá, !",
+        "elementosFilhos": 0
+      }
+    },
+    {
+      "numero": 2,
+      "entrada": "Franciny",
+      "passou": true,
+      "valorLido": "Franciny",
+      "observado": {
+        "texto": "Olá, Franciny!",
+        "elementosFilhos": 0
+      }
+    },
+    {
+      "numero": 3,
+      "entrada": "<strong>Franciny</strong>",
+      "passou": true,
+      "valorLido": "<strong>Franciny</strong>",
+      "observado": {
+        "texto": "Olá, <strong>Franciny</strong>!",
+        "elementosFilhos": 0
+      }
+    },
+    {
+      "numero": 4,
+      "entrada": "<span title=\"exemplo\">Texto</span>",
+      "passou": true,
+      "valorLido": "<span title=\"exemplo\">Texto</span>",
+      "observado": {
+        "texto": "Olá, <span title=\"exemplo\">Texto</span>!",
+        "elementosFilhos": 0
+      }
+    },
+    {
+      "numero": 5,
+      "entrada": "&lt;strong&gt;Franciny&lt;/strong&gt;",
+      "passou": true,
+      "valorLido": "&lt;strong&gt;Franciny&lt;/strong&gt;",
+      "observado": {
+        "texto": "Olá, &lt;strong&gt;Franciny&lt;/strong&gt;!",
+        "elementosFilhos": 0
+      }
+    },
+    {
+      "numero": 6,
+      "entrada": "Aspas: \" ' | símbolos: < > &",
+      "passou": true,
+      "valorLido": "Aspas: \" ' | símbolos: < > &",
+      "observado": {
+        "texto": "Olá, Aspas: \" ' | símbolos: < > &!",
+        "elementosFilhos": 0
+      }
+    },
+    {
+      "numero": 7,
+      "entrada": "Unicode: ç 漢字 😀",
+      "passou": true,
+      "valorLido": "Unicode: ç 漢字 😀",
+      "observado": {
+        "texto": "Olá, Unicode: ç 漢字 😀!",
+        "elementosFilhos": 0
+      }
+    },
+    {
+      "numero": 8,
+      "entrada": "${nome}",
+      "passou": true,
+      "valorLido": "${nome}",
+      "observado": {
+        "texto": "Olá, ${nome}!",
+        "elementosFilhos": 0
+      }
+    },
+    {
+      "numero": 9,
+      "entrada": "<<<<<<>>>>>>",
+      "passou": true,
+      "valorLido": "<<<<<<>>>>>>",
+      "observado": {
+        "texto": "Olá, <<<<<<>>>>>>!",
+        "elementosFilhos": 0
+      }
+    },
+    {
+      "numero": 10,
+      "entrada": "Texto antes <strong>nome</strong> texto depois",
+      "passou": true,
+      "valorLido": "Texto antes <strong>nome</strong> texto depois",
+      "observado": {
+        "texto": "Olá, Texto antes <strong>nome</strong> texto depois!",
+        "elementosFilhos": 0
+      }
+    }
+  ]
+}

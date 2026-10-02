@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de prevenção de XSS</title>
+</head>
+<body>
+  <h1>Exibir conteúdo como texto</h1>
+
+  <label for="nome">Digite seu nome:</label>
+  <input id="nome" type="text">
+  <button id="mostrar">Mostrar</button>
+
+  <p id="resultado"></p>
+
+<script>
+  const entrada = document.getElementById("nome");
+  const resultado = document.getElementById("resultado");
+  const botao = document.getElementById("mostrar");
+
+  console.assert(
+    resultado instanceof HTMLParagraphElement,
+    "O destino não é um parágrafo."
+  );
+
+  console.assert(
+    document.querySelectorAll("#resultado").length === 1,
+    "O identificador resultado não é único."
+  );
+
+  botao.addEventListener("click", () => {
+    const nome = entrada.value;
+
+    // O navegador trata o conteúdo como texto.
+    resultado.textContent = `Olá, ${nome}!`;
+
+    console.assert(
+      resultado.textContent === `Olá, ${nome}!`,
+      "Erro: o texto exibido foi alterado."
+    );
+
+    console.assert(
+      resultado.children.length === 0,
+      "Erro: foram encontrados elementos HTML filhos."
+    );
+
+    console.log("Verificações executadas.");
+  });
+</script>
+</body>
+</html>

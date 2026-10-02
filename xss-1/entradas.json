@@ -1,0 +1,12 @@
+[
+  "",
+  "Franciny",
+  "<strong>Franciny</strong>",
+  "<span title=\"exemplo\">Texto</span>",
+  "&lt;strong&gt;Franciny&lt;/strong&gt;",
+  "Aspas: \" ' | símbolos: < > &",
+  "Unicode: ç 漢字 😀",
+  "${nome}",
+  "<<<<<<>>>>>>",
+  "Texto antes <strong>nome</strong> texto depois"
+]
